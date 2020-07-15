@@ -1,14 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Navbar from './containers/Navbar/Navbar';
 import Cover from './containers/Cover/Cover';
 
+const Container = styled.div``;
+
 function App() {
   return (
-    <div className='App'>
+    <Container>
       <Cover />
       <Navbar />
-    </div>
+      <Cover />
+    </Container>
   );
 }
 

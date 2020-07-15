@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import Button from '../../components/UI/Button/Button';
+
 const Title = styled.h1`
   color: ${({ theme }) => theme.colors.light};
   font-size: 4rem;
@@ -34,6 +36,7 @@ export class Cover extends Component {
       <Hero>
         <Title>Hoang Nguyen</Title>
         <SubTitle>Full-Stack Developer</SubTitle>
+        <Button>Projects</Button>
       </Hero>
     );
   }
