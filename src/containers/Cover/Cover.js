@@ -6,12 +6,14 @@ const Title = styled.h1`
   font-size: 5rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  text-align: center;
 `;
 
 const SubTitle = styled.p`
   color: ${({ theme }) => theme.colors.light};
   font-size: 2rem;
   letter-spacing: 3px;
+  text-align: center;
 `;
 
 const Hero = styled.div`
