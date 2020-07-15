@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Title = styled.h1`
   color: ${({ theme }) => theme.colors.light};
-  font-size: 5rem;
+  font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   text-align: center;

@@ -5,12 +5,12 @@ const Link = styled.button`
   background: transparent;
   border: none;
   color: ${({ theme }) => theme.colors.light};
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   outline: none;
   cursor: pointer;
 
   border: 2px solid transparent;
-  padding: 0.1em 0;
+  padding: 0.2em 0;
   margin: 0 1.5em;
 
   letter-spacing: 0.1em;

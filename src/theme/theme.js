@@ -6,7 +6,12 @@ const theme = {
     dark: '#222831',
   },
 
-  breakpoints: {},
+  breakpoints: {
+    phoneL: '(min-width: 425px)',
+    tablet: '(min-width: 768px)',
+    laptop: '(min-width: 1024px)',
+    desktop: '(min-width: 1440px)',
+  },
 };
 
 export default theme;

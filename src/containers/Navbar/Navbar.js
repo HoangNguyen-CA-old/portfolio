@@ -16,7 +16,7 @@ const Container = styled.div`
 `;
 
 const Logo = styled.h6`
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;

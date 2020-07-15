@@ -11,6 +11,17 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
+    html{
+        font-size: 90%;
+
+    }
+   
+    @media ${({ theme }) => theme.breakpoints.tablet}{
+        html{
+            font-size: 100%;
+        }
+    }
+
 `;
 
 export default GlobalStyle;
