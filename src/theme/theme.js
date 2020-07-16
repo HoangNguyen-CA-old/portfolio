@@ -16,6 +16,8 @@ const theme = {
   fontSizes: {
     header: '2.5rem',
   },
+
+  mainFont: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
 };
 
 export default theme;

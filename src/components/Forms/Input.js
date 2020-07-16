@@ -20,11 +20,14 @@ const TextArea = styled.textarea`
   border: 2px solid #bbb;
   display: block;
   border-radius: 0.5em;
+  height: 15em;
 
   font-size: 1.1rem;
   padding: 0.3em 0.5em;
   outline: none;
   width: 100%;
+
+  font-family: ${({ theme }) => theme.mainFont};
   &:focus {
     border: 2px solid ${({ theme }) => theme.colors.darkLight};
   }

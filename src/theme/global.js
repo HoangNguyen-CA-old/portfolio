@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     html{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: ${({ theme }) => theme.mainFont};
     }
 
     html{

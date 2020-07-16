@@ -5,15 +5,19 @@ import Navbar from './containers/Navbar/Navbar';
 import Cover from './containers/Cover/Cover';
 import Projects from './containers/Projects/Projects';
 import Contact from './containers/Contact/Contact';
+import Skills from './containers/Skills/Skills';
 
-const Container = styled.div``;
+const Container = styled.div`
+  overflow: hidden;
+`;
 
 function App() {
   return (
     <Container>
-      <Cover />
       <Navbar />
+      <Cover />
       <Projects />
+      <Skills />
       <Contact />
     </Container>
   );

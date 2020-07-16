@@ -5,6 +5,7 @@ const Highlighted = css`
   border-radius: 1em;
   border: 2px solid ${({ theme }) => theme.colors.light};
   padding: 0.3em 0.5em;
+  margin: 0.5em auto;
 
   transition: 0.2s ease-out;
 
@@ -12,6 +13,11 @@ const Highlighted = css`
     background-color: ${({ theme }) => theme.colors.light};
     border-bottom: 2px solid ${({ theme }) => theme.colors.light};
     color: ${({ theme }) => theme.colors.dark};
+  }
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    font-size: 1.1rem;
+    margin: 0 0 0 1.5em;
   }
 `;
 const Link = styled.button`

@@ -21,7 +21,6 @@ const SubTitle = styled.p`
   font-size: 2rem;
   letter-spacing: 3px;
   text-align: center;
-  margin-top: 0em;
 `;
 
 const Hero = styled.div`
@@ -36,13 +35,24 @@ const Hero = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
 `;
 
+const Line = styled.hr`
+  display: inline-block;
+  width: 3em;
+  height: 5px;
+  background-color: ${({ theme }) => theme.colors.light};
+  border: none;
+  margin: 1em 0;
+  border-radius: 1em;
+`;
+
 export class Cover extends Component {
   render() {
     return (
       <Hero>
         <Title>
-          <Emphasized>Hi,</Emphasized> <br></br> My Name is Hoang
+          <Emphasized>Hi,</Emphasized> <br></br> I build apps for the web
         </Title>
+        <Line></Line>
         <SubTitle>Full-Stack Developer</SubTitle>
       </Hero>
     );
