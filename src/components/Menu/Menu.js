@@ -15,10 +15,13 @@ const Container = styled.div`
 
   background-color: ${({ theme }) => theme.colors.dark};
   opacity: 0.9;
+  transform: scale(100%, 100%);
   display: ${(props) => (props.open ? 'block' : 'none')};
+  transition: 0.2s ease-out;
 
   @media ${({ theme }) => theme.breakpoints.tablet} {
     display: none;
+    transform: scale(150%, 150%);
   }
 `;
 

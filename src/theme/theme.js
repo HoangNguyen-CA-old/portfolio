@@ -12,6 +12,10 @@ const theme = {
     laptop: '(min-width: 1024px)',
     desktop: '(min-width: 1440px)',
   },
+
+  fontSizes: {
+    header: '2.5rem',
+  },
 };
 
 export default theme;
