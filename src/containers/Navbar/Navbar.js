@@ -15,7 +15,6 @@ const Container = styled.div`
   align-items: center;
   background-color: ${(props) =>
     props.visible ? props.theme.colors.dark : 'transparent'};
-
   transition: 0.2s ease-out;
 
   padding: 0.5em 1.5em;
@@ -69,7 +68,6 @@ export default class Navbar extends Component {
 
   handleScroll = () => {
     if (window.scrollY > 0) {
-      console.log('wow');
       this.setState({ visible: true });
     } else {
       this.setState({ visible: false });

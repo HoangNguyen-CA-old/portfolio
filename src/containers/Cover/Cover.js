@@ -5,10 +5,15 @@ import Button from '../../components/UI/Button/Button';
 
 const Title = styled.h1`
   color: ${({ theme }) => theme.colors.light};
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   text-align: center;
+  line-height: 1.4em;
+`;
+
+const Emphasized = styled.span`
+  font-size: 5rem;
 `;
 
 const SubTitle = styled.p`
@@ -16,6 +21,7 @@ const SubTitle = styled.p`
   font-size: 2rem;
   letter-spacing: 3px;
   text-align: center;
+  margin-top: 0em;
 `;
 
 const Hero = styled.div`
@@ -25,8 +31,8 @@ const Hero = styled.div`
   align-items: center;
   width: 100%;
   height: 100vh;
-  min-height: 500px;
-  max-height: 3000px;
+  min-height: 400px;
+  padding: 1em;
   background-color: ${({ theme }) => theme.colors.primary};
 `;
 
@@ -34,7 +40,9 @@ export class Cover extends Component {
   render() {
     return (
       <Hero>
-        <Title>Hoang Nguyen</Title>
+        <Title>
+          <Emphasized>Hi,</Emphasized> <br></br> My Name is Hoang
+        </Title>
         <SubTitle>Full-Stack Developer</SubTitle>
       </Hero>
     );

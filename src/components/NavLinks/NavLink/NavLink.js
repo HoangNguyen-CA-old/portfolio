@@ -1,6 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
+const Highlighted = css`
+  border-radius: 1em;
+  border: 2px solid ${({ theme }) => theme.colors.light};
+  padding: 0.3em 0.5em;
+
+  transition: 0.2s ease-out;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.light};
+    border-bottom: 2px solid ${({ theme }) => theme.colors.light};
+    color: ${({ theme }) => theme.colors.dark};
+  }
+`;
 const Link = styled.button`
   background: transparent;
   border: none;
@@ -10,11 +23,13 @@ const Link = styled.button`
   font-size: 1.5rem;
 
   border: 2px solid transparent;
+
   padding: 0.2em 0;
   margin: 0.2em auto;
 
   letter-spacing: 0.1em;
 
+  transition: border-bottom 0.09s ease-out;
   &:hover {
     border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
   }
@@ -26,10 +41,12 @@ const Link = styled.button`
     font-size: 1.1rem;
     margin-left: 1.5em;
   }
+
+  ${(props) => (props.em ? Highlighted : null)}
 `;
 
 const NavLink = (props) => {
-  return <Link onClick={props.clicked}>{props.children}</Link>;
+  return <Link {...props}>{props.children}</Link>;
 };
 
 export default NavLink;

@@ -6,9 +6,9 @@ import NavLink from './NavLink/NavLink';
 const NavLinks = (props) => {
   return (
     <>
-      <NavLink>Projects</NavLink>
       <NavLink>Skills</NavLink>
       <NavLink>Contact</NavLink>
+      <NavLink em={true}>Projects</NavLink>
     </>
   );
 };
