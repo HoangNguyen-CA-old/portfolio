@@ -24,7 +24,7 @@ const Link = styled.button`
   }
   @media ${({ theme }) => theme.breakpoints.tablet} {
     font-size: 1.1rem;
-    margin: 0 1.5em;
+    margin-left: 1.5em;
   }
 `;
 

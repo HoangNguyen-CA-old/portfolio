@@ -36,7 +36,6 @@ export class Cover extends Component {
       <Hero>
         <Title>Hoang Nguyen</Title>
         <SubTitle>Full-Stack Developer</SubTitle>
-        <Button>Projects</Button>
       </Hero>
     );
   }

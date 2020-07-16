@@ -5,7 +5,7 @@ import NavLinks from '../../components/NavLinks/NavLinks';
 import Menu from '../../components/Menu/Menu';
 
 const Container = styled.div`
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -13,8 +13,12 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.dark};
-  padding: 1em 1.5em;
+  background-color: ${(props) =>
+    props.visible ? props.theme.colors.dark : 'transparent'};
+
+  transition: 0.2s ease-out;
+
+  padding: 0.5em 1.5em;
   color: ${({ theme }) => theme.colors.light};
 `;
 
@@ -50,6 +54,7 @@ const LinksContainer = styled.div`
 export default class Navbar extends Component {
   state = {
     navOpen: false,
+    visible: false,
   };
 
   handleNavToggle = () => {
@@ -62,9 +67,26 @@ export default class Navbar extends Component {
     this.setState({ navOpen: false });
   };
 
+  handleScroll = () => {
+    if (window.scrollY > 0) {
+      console.log('wow');
+      this.setState({ visible: true });
+    } else {
+      this.setState({ visible: false });
+    }
+  };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
   render() {
     return (
-      <Container>
+      <Container visible={this.state.visible}>
         <Logo>Hoang Nguyen</Logo>
         <LinksContainer>
           <NavLinks open={this.state.navOpen} />
