@@ -14,7 +14,7 @@ const theme = {
   },
 
   fontSizes: {
-    header: '2.5rem',
+    header: '3rem',
   },
 
   mainFont: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
