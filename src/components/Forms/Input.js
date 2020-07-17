@@ -9,7 +9,7 @@ const InputEl = styled.input`
   width: 100%;
 
   font-size: 1.1rem;
-  padding: 0.3em 0.5em;
+  padding: 0.5em 0.5em;
   outline: none;
   &:focus {
     border: 2px solid ${({ theme }) => theme.colors.darkLight};
@@ -23,7 +23,7 @@ const TextArea = styled.textarea`
   height: 15em;
 
   font-size: 1.1rem;
-  padding: 0.3em 0.5em;
+  padding: 0.5em 0.5em;
   outline: none;
   width: 100%;
 

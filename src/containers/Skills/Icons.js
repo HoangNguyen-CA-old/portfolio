@@ -32,7 +32,7 @@ export const backendIcons = [
 
 export const toolIcons = [
   { icon: gitIcon, label: 'Git' },
+  { icon: npmIcon, label: 'npm' },
   { icon: herokuIcon, label: 'Heroku' },
   { icon: netlifyIcon, label: 'Netlify' },
-  { icon: npmIcon, label: 'npm' },
 ];

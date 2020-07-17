@@ -4,13 +4,17 @@ import styled from 'styled-components';
 import FormInputs from '../../components/Forms/FormInputs';
 import Button from '../../components/UI/Button/Button';
 
+import { Icon } from '@iconify/react';
+import githubIcon from '@iconify/icons-logos/github-icon';
+import linkedinIcon from '@iconify/icons-logos/linkedin';
+
 const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2em;
-  background-color${({ theme }) => theme.colors.light}
+  padding: 3em;
+  background-color: ${({ theme }) => theme.colors.light};
 `;
 
 const Header = styled.h2`
@@ -28,7 +32,7 @@ const Form = styled.form`
 const StyledButton = styled(Button)`
   font-size: 1.2rem;
   padding: 0.6em 2em;
-  background-color: ${({ theme }) => theme.colors.darkLight};
+  background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.light};
   border: none;
 `;
@@ -37,6 +41,32 @@ const BottomRow = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 1em;
+`;
+
+const TopRow = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const StyledIcon = styled(Icon)`
+  font-size: 1.7rem;
+  filter: grayscale(100%);
+`;
+
+const IconWrapper = styled.a.attrs(() => {
+  return {
+    target: '_blank',
+  };
+})`
+  outline: none;
+  cursor: pointer;
+
+  margin: 0 0.5em;
+
+  &:hover * {
+    filter: grayscale(0%);
+  }
 `;
 
 class Contact extends Component {
@@ -77,6 +107,14 @@ class Contact extends Component {
     return (
       <Container>
         <Header>Contact</Header>
+        <TopRow>
+          <IconWrapper href='https://github.com/HoangNguyen-CA/'>
+            <StyledIcon icon={githubIcon}></StyledIcon>
+          </IconWrapper>
+          <IconWrapper href='https://github.com/HoangNguyen-CA/'>
+            <StyledIcon icon={linkedinIcon}></StyledIcon>
+          </IconWrapper>
+        </TopRow>
         <Form onSubmit={this.handleSubmit}>
           <FormInputs
             controls={this.state.controls}

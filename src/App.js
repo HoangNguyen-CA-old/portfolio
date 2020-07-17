@@ -7,6 +7,8 @@ import Projects from './containers/Projects/Projects';
 import Contact from './containers/Contact/Contact';
 import Skills from './containers/Skills/Skills';
 
+import Divider from './components/UI/Divider/Divider';
+
 const Container = styled.div`
   overflow: hidden;
 `;
@@ -18,6 +20,7 @@ function App() {
       <Cover />
       <Projects />
       <Skills />
+      <Divider></Divider>
       <Contact />
     </Container>
   );
