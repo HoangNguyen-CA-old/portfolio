@@ -14,6 +14,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 3em;
+
   background-color: ${({ theme }) => theme.colors.light};
 `;
 
@@ -40,7 +41,7 @@ const StyledButton = styled(Button)`
 const BottomRow = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 1em;
+  margin-top: 2em;
 `;
 
 const TopRow = styled.div`
@@ -62,7 +63,7 @@ const IconWrapper = styled.a.attrs(() => {
   outline: none;
   cursor: pointer;
 
-  margin: 0 0.5em;
+  margin: 0 0.6em;
 
   &:hover * {
     filter: grayscale(0%);
@@ -106,12 +107,12 @@ class Contact extends Component {
   render() {
     return (
       <Container>
-        <Header>Contact</Header>
+        <Header>Get in touch</Header>
         <TopRow>
           <IconWrapper href='https://github.com/HoangNguyen-CA/'>
             <StyledIcon icon={githubIcon}></StyledIcon>
           </IconWrapper>
-          <IconWrapper href='https://github.com/HoangNguyen-CA/'>
+          <IconWrapper href='https://www.linkedin.com/in/hoang-nguyen-a36636196/  '>
             <StyledIcon icon={linkedinIcon}></StyledIcon>
           </IconWrapper>
         </TopRow>

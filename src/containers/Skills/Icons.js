@@ -4,6 +4,7 @@ import htmlIcon from '@iconify/icons-logos/html-5';
 import cssIcon from '@iconify/icons-logos/css-3';
 import jsIcon from '@iconify/icons-logos/javascript';
 import bootstrapIcon from '@iconify/icons-logos/bootstrap';
+import sassIcon from '@iconify/icons-logos/sass';
 
 import nodejsIcon from '@iconify/icons-logos/nodejs-icon';
 import expressIcon from '@iconify/icons-logos/express';
@@ -21,6 +22,7 @@ export const frontendIcons = [
   { icon: jsIcon, label: 'Javascript' },
   { icon: reactIcon, label: 'React' },
   { icon: reduxIcon, label: 'Redux' },
+  { icon: sassIcon, label: 'Sass' },
   { icon: bootstrapIcon, label: 'Bootstrap' },
 ];
 

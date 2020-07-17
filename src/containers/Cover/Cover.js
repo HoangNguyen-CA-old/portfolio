@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import { Icon } from '@iconify/react';
+
+import arrowIcon from '@iconify/icons-mdi/arrow-down';
+
 const Title = styled.h1`
   color: ${({ theme }) => theme.colors.light};
   font-size: 3rem;
@@ -22,6 +26,7 @@ const SubTitle = styled.p`
 `;
 
 const Hero = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,6 +48,25 @@ const Line = styled.hr`
   border-radius: 1em;
 `;
 
+const ArrowContainer = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  bottom: 2em;
+  color: ${({ theme }) => theme.colors.light};
+`;
+
+const ArrowLabel = styled.p`
+  margin-bottom: 0.2em;
+  font-size: 1rem;
+`;
+
+const StyledIcon = styled(Icon)`
+  font-size: 1.5rem;
+`;
+
 export class Cover extends Component {
   render() {
     return (
@@ -52,6 +76,10 @@ export class Cover extends Component {
         </Title>
         <Line></Line>
         <SubTitle>Full-Stack Developer</SubTitle>
+        <ArrowContainer>
+          <ArrowLabel>Scroll</ArrowLabel>
+          <StyledIcon icon={arrowIcon}></StyledIcon>
+        </ArrowContainer>
       </Hero>
     );
   }
