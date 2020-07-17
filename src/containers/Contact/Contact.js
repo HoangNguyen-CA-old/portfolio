@@ -106,7 +106,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <Container>
+      <Container id='contact'>
         <Header>Get in touch</Header>
         <TopRow>
           <IconWrapper href='https://github.com/HoangNguyen-CA/'>

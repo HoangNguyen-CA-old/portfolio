@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import Project from '../../components/Project/Project';
 
+import recipeAppImage from '../../assets/images/recipe-app.png';
+
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -12,11 +14,21 @@ const Container = styled.div`
 `;
 
 export class Projects extends Component {
-  render() {
+  render(props) {
     return (
       <Container>
-        <Project></Project>
-        <Project></Project>
+        <Project
+          header='Recipe Search App'
+          background={recipeAppImage}
+          codeLink='https://github.com/HoangNguyen-CA/cooking-recipe-app'
+          demoLink='https://recipe-app-000.herokuapp.com'
+        ></Project>
+        <Project
+          header='Personal Blog'
+          background={recipeAppImage}
+          codeLink='https://github.com/HoangNguyen-CA/cooking-recipe-app'
+          demoLink='https://recipe-app-000.herokuapp.com'
+        ></Project>
       </Container>
     );
   }

@@ -18,7 +18,7 @@ const Header = styled.h2`
 
 const Skills = () => {
   return (
-    <Container>
+    <Container id='skills'>
       <Header>Skills & Technologies</Header>
       <SkillRow header='Front-End' icons={frontendIcons}></SkillRow>
       <SkillRow header='Back-End' icons={backendIcons}></SkillRow>

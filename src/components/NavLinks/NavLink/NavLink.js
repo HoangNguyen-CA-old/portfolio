@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+import { Link } from 'react-scroll';
+
 const Highlighted = css`
   border-radius: 1em;
   border: 2px solid ${({ theme }) => theme.colors.light};
@@ -21,7 +23,7 @@ const Highlighted = css`
   }
 `;
 
-const Link = styled.button`
+const StyledLink = styled(Link)`
   background: transparent;
   border: none;
   color: ${({ theme }) => theme.colors.light};
@@ -53,7 +55,7 @@ const Link = styled.button`
 `;
 
 const NavLink = (props) => {
-  return <Link {...props}>{props.children}</Link>;
+  return <StyledLink {...props}>{props.children}</StyledLink>;
 };
 
 export default NavLink;
