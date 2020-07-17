@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import FormInputs from '../../components/Forms/FormInputs';
+import Button from '../../components/UI/Button/Button';
 
 const Container = styled.div`
   width: 100%;
@@ -9,16 +10,33 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 2em;
-`;
-
-const InputsContainer = styled.div`
-  width: 80%;
-  max-width: 600px;
+  background-color${({ theme }) => theme.colors.light}
 `;
 
 const Header = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes.header};
   text-transform: uppercase;
+  margin-bottom: 0.5em;
+`;
+
+const Form = styled.form`
+  width: 100%;
+  max-width: 600px;
+  padding: 1em;
+`;
+
+const StyledButton = styled(Button)`
+  font-size: 1.2rem;
+  padding: 0.6em 2em;
+  background-color: ${({ theme }) => theme.colors.darkLight};
+  color: ${({ theme }) => theme.colors.light};
+  border: none;
+`;
+
+const BottomRow = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
 `;
 
 class Contact extends Component {
@@ -50,16 +68,24 @@ class Contact extends Component {
     });
   };
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Submit');
+  };
+
   render() {
     return (
       <Container>
         <Header>Contact</Header>
-        <InputsContainer>
+        <Form onSubmit={this.handleSubmit}>
           <FormInputs
             controls={this.state.controls}
             onChange={this.handleControlChange}
           />
-        </InputsContainer>
+          <BottomRow>
+            <StyledButton type='submit'>Submit</StyledButton>
+          </BottomRow>
+        </Form>
       </Container>
     );
   }

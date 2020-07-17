@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import Button from '../../components/UI/Button/Button';
-
 const Title = styled.h1`
   color: ${({ theme }) => theme.colors.light};
   font-size: 3rem;

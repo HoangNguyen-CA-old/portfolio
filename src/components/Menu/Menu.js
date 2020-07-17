@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Icon } from '@iconify/react';
+import closeIcon from '@iconify/icons-mdi/close';
+
 import NavLinks from '../NavLinks/NavLinks';
 
 const Container = styled.div`
@@ -25,16 +28,12 @@ const Container = styled.div`
   }
 `;
 
-const Icon = styled.i`
+const StyledIcon = styled(Icon)`
+  font-size: 2rem;
   cursor: pointer;
-  font-size: 1.8rem;
-  display: block;
-`;
-
-const IconContainer = styled.span`
   position: absolute;
-  right: 1.5em;
-  top: 1em;
+  right: 0.7em;
+  top: 0.5em;
   display: inline-block;
 `;
 
@@ -47,9 +46,7 @@ const LinksContainer = styled.div`
 const Menu = (props) => {
   return (
     <Container open={props.open}>
-      <IconContainer onClick={props.onClose}>
-        <Icon className='fas fa-times'></Icon>
-      </IconContainer>
+      <StyledIcon icon={closeIcon} onClick={props.onClose}></StyledIcon>
       <LinksContainer>
         <NavLinks />
       </LinksContainer>

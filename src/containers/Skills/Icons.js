@@ -13,6 +13,7 @@ import mongodbICon from '@iconify/icons-logos/mongodb';
 import gitIcon from '@iconify/icons-logos/git-icon';
 import herokuIcon from '@iconify/icons-logos/heroku-icon';
 import netlifyIcon from '@iconify/icons-logos/netlify';
+import npmIcon from '@iconify/icons-logos/npm-2';
 
 export const frontendIcons = [
   { icon: htmlIcon, label: 'HTML' },
@@ -26,12 +27,12 @@ export const frontendIcons = [
 export const backendIcons = [
   { icon: nodejsIcon, label: 'NodeJs' },
   { icon: expressIcon, label: 'Express' },
+  { icon: mongodbICon, label: 'MongoDB' },
 ];
-
-export const databaseIcons = [{ icon: mongodbICon, label: 'MongoDB' }];
 
 export const toolIcons = [
   { icon: gitIcon, label: 'Git' },
   { icon: herokuIcon, label: 'Heroku' },
   { icon: netlifyIcon, label: 'Netlify' },
+  { icon: npmIcon, label: 'npm' },
 ];

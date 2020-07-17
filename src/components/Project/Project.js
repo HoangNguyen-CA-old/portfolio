@@ -6,14 +6,17 @@ import Button from '../../components/UI/Button/Button';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  border: 1px solid red;
+
   padding: 1em;
 
   justify-content: center;
   align-items: center;
 
-  border: 1px solid black;
   width: 100%;
   height: 20em;
+
+  background-color: white;
 
   @media ${({ theme }) => theme.breakpoints.tablet} {
     width: 50%;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import SkillRow from '../../components/SkillRow/SkillRow';
 
-import { frontendIcons, backendIcons, databaseIcons, toolIcons } from './Icons';
+import { frontendIcons, backendIcons, toolIcons } from './Icons';
 
 const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.light};
@@ -22,7 +22,6 @@ const Skills = () => {
       <Header>Skills & Technologies</Header>
       <SkillRow header='Front-End' icons={frontendIcons}></SkillRow>
       <SkillRow header='Back-End' icons={backendIcons}></SkillRow>
-      <SkillRow header='Database' icons={databaseIcons}></SkillRow>
       <SkillRow header='Tools' icons={toolIcons}></SkillRow>
     </Container>
   );

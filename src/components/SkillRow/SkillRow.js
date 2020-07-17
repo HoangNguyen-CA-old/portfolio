@@ -36,7 +36,7 @@ const Line = styled.hr`
 
 const SkillsRow = (props) => {
   let icons = props.icons.map((icon) => {
-    return <Skill icon={icon.icon} label={icon.label}></Skill>;
+    return <Skill key={icon.label} icon={icon.icon} label={icon.label}></Skill>;
   });
   return (
     <Container>

@@ -9,8 +9,10 @@ const Button = styled.button`
 
   background-color: ${({ theme }) => theme.colors.dark};
   color: ${({ theme }) => theme.colors.light};
-  padding: 0.4em 0.7em;
+  padding: 0.6em 0.7em;
   border-radius: 1em;
+
+  text-transform: uppercase;
 `;
 
 export default Button;

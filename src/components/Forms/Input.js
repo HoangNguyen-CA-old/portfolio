@@ -41,7 +41,7 @@ const Label = styled.label`
 `;
 
 const Container = styled.div`
-  margin: 0.5em 1.1em;
+  margin: 0.5em 0;
 `;
 
 const Input = (props) => {
@@ -84,7 +84,7 @@ const Input = (props) => {
   }
   return (
     <Container>
-      <Label>{props.label}</Label>
+      <Label>{props.label}:</Label>
       {inputEl}
     </Container>
   );
