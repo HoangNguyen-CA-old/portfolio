@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const InputEl = styled.input`
   border: 2px solid #bbb;
   display: block;
-  border-radius: 0.5em;
+  border-radius: 3px;
 
   width: 100%;
 
@@ -19,13 +19,15 @@ const InputEl = styled.input`
 const TextArea = styled.textarea`
   border: 2px solid #bbb;
   display: block;
-  border-radius: 0.5em;
+  border-radius: 3px;
   height: 15em;
 
   font-size: 1.1rem;
   padding: 0.3em 0.5em;
   outline: none;
   width: 100%;
+
+  resize: none;
 
   font-family: ${({ theme }) => theme.mainFont};
   &:focus {
