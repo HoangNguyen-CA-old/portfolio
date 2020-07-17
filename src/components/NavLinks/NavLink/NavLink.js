@@ -1,4 +1,3 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
 
 import { Link } from 'react-scroll';
@@ -51,11 +50,7 @@ const StyledLink = styled(Link)`
     margin-left: 1.5em;
   }
 
-  ${(props) => (props.em ? Highlighted : null)}
+  ${(props) => (props.emp ? Highlighted : null)}
 `;
 
-const NavLink = (props) => {
-  return <StyledLink {...props}>{props.children}</StyledLink>;
-};
-
-export default NavLink;
+export default StyledLink;

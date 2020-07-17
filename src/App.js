@@ -6,6 +6,7 @@ import Cover from './containers/Cover/Cover';
 import Projects from './containers/Projects/Projects';
 import Contact from './containers/Contact/Contact';
 import Skills from './containers/Skills/Skills';
+import Footer from './containers/Footer/Footer';
 
 import Divider from './components/UI/Divider/Divider';
 
@@ -22,6 +23,7 @@ function App() {
       <Skills />
       <Divider></Divider>
       <Contact />
+      <Footer />
     </Container>
   );
 }

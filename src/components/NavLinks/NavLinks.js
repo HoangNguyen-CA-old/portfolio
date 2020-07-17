@@ -11,7 +11,7 @@ const NavLinks = (props) => {
       <NavLink to={'contact'} duration={500} smooth={true}>
         Contact
       </NavLink>
-      <NavLink em={true} to={'projects'} duration={500} smooth={true}>
+      <NavLink emp={1} to={'projects'} duration={500} smooth={true}>
         Projects
       </NavLink>
     </>
