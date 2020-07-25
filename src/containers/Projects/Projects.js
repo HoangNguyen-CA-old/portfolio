@@ -26,8 +26,8 @@ export class Projects extends Component {
         <Project
           header='Personal Blog'
           background={recipeAppImage}
-          codeLink='https://github.com/HoangNguyen-CA/cooking-recipe-app'
-          demoLink='https://recipe-app-000.herokuapp.com'
+          codeLink='https://github.com/HoangNguyen-CA/personal-blog'
+          demoLink='https://hoang-nguyen-blog.herokuapp.com/'
         ></Project>
       </Container>
     );

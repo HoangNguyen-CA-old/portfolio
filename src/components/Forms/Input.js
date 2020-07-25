@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const InputEl = styled.input`
-  border: 2px solid #bbb;
+  border: 1.5px solid #bbb;
   display: block;
   border-radius: 3px;
 
@@ -12,12 +12,12 @@ const InputEl = styled.input`
   padding: 0.5em 0.5em;
   outline: none;
   &:focus {
-    border: 2px solid ${({ theme }) => theme.colors.darkLight};
+    border: 1.5px solid ${({ theme }) => theme.colors.darkLight};
   }
 `;
 
 const TextArea = styled.textarea`
-  border: 2px solid #bbb;
+  border: 1.5px solid #bbb;
   display: block;
   border-radius: 3px;
   height: 15em;
@@ -31,15 +31,16 @@ const TextArea = styled.textarea`
 
   font-family: ${({ theme }) => theme.mainFont};
   &:focus {
-    border: 2px solid ${({ theme }) => theme.colors.darkLight};
+    border: 1.5px solid ${({ theme }) => theme.colors.darkLight};
   }
 `;
 
 const Label = styled.label`
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   display: block;
   text-transform: capitalize;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.3em;
+  color: ${({ theme }) => theme.colors.dark};
 `;
 
 const Container = styled.div`

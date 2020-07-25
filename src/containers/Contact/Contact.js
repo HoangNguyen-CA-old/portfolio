@@ -13,28 +13,34 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3em;
+  padding: 3em 1em;
 
-  background-color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.primary};
 `;
 
 const Header = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes.header};
   text-transform: uppercase;
   margin-bottom: 0.5em;
+  color: ${({ theme }) => theme.colors.light};
 `;
 
 const Form = styled.form`
-  width: 100%;
+  width: 95%;
   max-width: 600px;
-  padding: 1em;
+  padding: 1em 1.5em;
+  border-radius: 3px;
+  background-color: ${({ theme }) => theme.colors.light};
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
 `;
 
 const StyledButton = styled(Button)`
   font-size: 1.2rem;
-  padding: 0.6em 2em;
-  background-color: ${({ theme }) => theme.colors.primary};
+  padding: 0.6em 2.5em;
   color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.primary};
+  margin-bottom: 0.5em;
+
   border: none;
 `;
 
@@ -45,6 +51,7 @@ const BottomRow = styled.div`
 `;
 
 const TopRow = styled.div`
+  margin: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,21 +115,22 @@ class Contact extends Component {
     return (
       <Container id='contact'>
         <Header>Get in touch</Header>
-        <TopRow>
-          <IconWrapper href='https://github.com/HoangNguyen-CA/'>
-            <StyledIcon icon={githubIcon}></StyledIcon>
-          </IconWrapper>
-          <IconWrapper href='https://www.linkedin.com/in/hoang-nguyen-a36636196/  '>
-            <StyledIcon icon={linkedinIcon}></StyledIcon>
-          </IconWrapper>
-        </TopRow>
+
         <Form onSubmit={this.handleSubmit}>
+          <TopRow>
+            <IconWrapper href='https://github.com/HoangNguyen-CA/'>
+              <StyledIcon icon={githubIcon}></StyledIcon>
+            </IconWrapper>
+            <IconWrapper href='https://www.linkedin.com/in/hoang-nguyen-a36636196/  '>
+              <StyledIcon icon={linkedinIcon}></StyledIcon>
+            </IconWrapper>
+          </TopRow>
           <FormInputs
             controls={this.state.controls}
             onChange={this.handleControlChange}
           />
           <BottomRow>
-            <StyledButton type='submit'>Submit</StyledButton>
+            <StyledButton type='submit'>Send</StyledButton>
           </BottomRow>
         </Form>
       </Container>
