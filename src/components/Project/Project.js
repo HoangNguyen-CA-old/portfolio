@@ -7,7 +7,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding: 1em;
+  padding: 2em 2em;
 
   justify-content: center;
   align-items: center;
@@ -38,13 +38,31 @@ const OverflowContainer = styled.div`
 
 const StyledButton = styled(Button)`
   margin: 0 0.5em;
+  padding: 0.5em 0.7em;
 `;
+
+const CodeButton = styled(StyledButton)`
+  background-color: ${({ theme }) => theme.colors.light};
+  color: ${({ theme }) => theme.colors.dark};
+`;
+
+const DemoButton = styled(StyledButton)`
+  background-color: ${({ theme }) => theme.colors.light};
+  color: ${({ theme }) => theme.colors.dark};
+`;
+
+const CaseButton = styled(StyledButton)`
+  margin-top: 0.8em;
+  background-color: ${({ theme }) => theme.colors.primary};
+`;
+
 const ButtonContainer = styled.div`
-  margin: 1em 0;
+  display: flex;
 `;
 
 const Header = styled.h3`
-  font-size: 2.2rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.7em;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.primary};
 `;
@@ -56,14 +74,25 @@ const Project = (props) => {
   const handleOpenDemo = () => {
     window.open(props.demoLink, '_blank');
   };
+
+  const handleOpenCaseStudy = () => {
+    window.open(props.caseStudyLink, '_blank');
+  };
   return (
     <OverflowContainer id='projects'>
       <Container background={props.background}>
         <Header>{props.header}</Header>
         <ButtonContainer>
-          <StyledButton onClick={handleOpenCode}>Code</StyledButton>
-          <StyledButton onClick={handleOpenDemo}>Demo</StyledButton>
+          <CodeButton onClick={handleOpenCode}>Code</CodeButton>
+          <DemoButton onClick={handleOpenDemo}>Demo</DemoButton>
         </ButtonContainer>
+        {props.caseStudyLink ? (
+          <>
+            <CaseButton onClick={handleOpenCaseStudy}>Case Study</CaseButton>
+          </>
+        ) : (
+          ''
+        )}
       </Container>
     </OverflowContainer>
   );
