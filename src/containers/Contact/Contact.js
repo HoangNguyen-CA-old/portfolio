@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import firebase from '../../config/fbConfig';
 
 import FormInputs from '../../components/Forms/FormInputs';
 import Button from '../../components/UI/Button/Button';
@@ -80,6 +81,11 @@ const IconWrapper = styled.a.attrs(() => {
 class Contact extends Component {
   state = {
     controls: {
+      name: {
+        type: 'input',
+        config: {},
+        value: '',
+      },
       email: {
         type: 'input',
         config: {},
@@ -94,7 +100,6 @@ class Contact extends Component {
   };
 
   handleControlChange = (event, controlName) => {
-    console.log(event.target.value, this.state.controls);
     this.setState({
       controls: {
         ...this.state.controls,
@@ -108,7 +113,17 @@ class Contact extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Submit');
+    firebase
+      .firestore()
+      .collection('submissions')
+      .add({
+        name: this.state.controls.name.value,
+        email: this.state.controls.email.value,
+        message: this.state.controls.message.value,
+        createdAt: new Date(),
+      })
+      .then(() => null)
+      .catch((err) => console.log(err));
   };
 
   render() {

@@ -58,11 +58,6 @@ const ArrowContainer = styled.div`
   color: ${({ theme }) => theme.colors.light};
 `;
 
-const ArrowLabel = styled.p`
-  margin-bottom: 0.2em;
-  font-size: 1rem;
-`;
-
 const StyledIcon = styled(Icon)`
   font-size: 1.5rem;
 `;
@@ -75,9 +70,8 @@ export class Cover extends Component {
           <Emphasized>Hi,</Emphasized> <br></br> I build apps for the web
         </Title>
         <Line></Line>
-        <SubTitle>Full-Stack Developer</SubTitle>
+        <SubTitle>Front-End Developer</SubTitle>
         <ArrowContainer>
-          <ArrowLabel>Scroll</ArrowLabel>
           <StyledIcon icon={arrowIcon}></StyledIcon>
         </ArrowContainer>
       </Hero>
