@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import firebase from '../../config/fbConfig';
+import { withRouter } from 'react-router-dom';
 
 import FormInputs from '../../components/Forms/FormInputs';
 import Button from '../../components/UI/Button/Button';
+import Spinner from '../../components/UI/Spinner/Spinner';
 
 import { Icon } from '@iconify/react';
 import githubIcon from '@iconify/icons-logos/github-icon';
@@ -40,15 +42,18 @@ const StyledButton = styled(Button)`
   padding: 0.6em 2.5em;
   color: ${({ theme }) => theme.colors.light};
   background-color: ${({ theme }) => theme.colors.primary};
-  margin-bottom: 0.5em;
 
   border: none;
 `;
 
 const BottomRow = styled.div`
   display: flex;
+  align-items: center;
+
   justify-content: center;
-  margin-top: 2em;
+  margin: 1em auto 0 auto;
+  height: 3.5em;
+  width: 3.5em;
 `;
 
 const TopRow = styled.div`
@@ -97,6 +102,7 @@ class Contact extends Component {
         value: '',
       },
     },
+    loading: false,
   };
 
   handleControlChange = (event, controlName) => {
@@ -113,6 +119,14 @@ class Contact extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    if (
+      this.state.controls.email.value === '' ||
+      this.state.controls.message.value === ''
+    ) {
+      return;
+    }
+    this.setState({ loading: true });
+
     firebase
       .firestore()
       .collection('submissions')
@@ -122,8 +136,11 @@ class Contact extends Component {
         message: this.state.controls.message.value,
         createdAt: new Date(),
       })
-      .then(() => null)
-      .catch((err) => console.log(err));
+      .then(() => {
+        this.setState({ loading: false });
+        this.props.history.push('/formSuccess');
+      })
+      .catch((err) => this.setState({ loading: false }));
   };
 
   render() {
@@ -145,7 +162,11 @@ class Contact extends Component {
             onChange={this.handleControlChange}
           />
           <BottomRow>
-            <StyledButton type='submit'>Send</StyledButton>
+            {this.state.loading ? (
+              <Spinner />
+            ) : (
+              <StyledButton type='submit'>Send</StyledButton>
+            )}
           </BottomRow>
         </Form>
       </Container>
@@ -153,4 +174,4 @@ class Contact extends Component {
   }
 }
 
-export default Contact;
+export default withRouter(Contact);
