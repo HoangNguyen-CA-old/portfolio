@@ -11,8 +11,6 @@ import Footer from './containers/Footer/Footer';
 
 import FormSuccess from './containers/FormSuccess/FormSuccess';
 
-import Divider from './components/UI/Divider/Divider';
-
 const Container = styled.div`
   overflow: hidden;
 `;

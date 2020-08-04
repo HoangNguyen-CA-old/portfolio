@@ -15,6 +15,7 @@ import gitIcon from '@iconify/icons-logos/git-icon';
 import herokuIcon from '@iconify/icons-logos/heroku-icon';
 import netlifyIcon from '@iconify/icons-logos/netlify';
 import npmIcon from '@iconify/icons-logos/npm-2';
+import firebaseIcon from '@iconify/icons-logos/firebase';
 
 export const frontendIcons = [
   { icon: htmlIcon, label: 'HTML' },
@@ -37,4 +38,5 @@ export const toolIcons = [
   { icon: npmIcon, label: 'npm' },
   { icon: herokuIcon, label: 'Heroku' },
   { icon: netlifyIcon, label: 'Netlify' },
+  { icon: firebaseIcon, label: 'Firebase' },
 ];

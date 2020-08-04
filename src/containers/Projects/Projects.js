@@ -22,7 +22,7 @@ export class Projects extends Component {
           background={recipeAppImage}
           codeLink='https://github.com/HoangNguyen-CA/cooking-recipe-app'
           demoLink='https://recipe-app-000.herokuapp.com'
-          caseStudyLink='https://hoang-nguyen-blog.herokuapp.com/article/5f14ac195775d42d0cc4e29b'
+          caseStudyLink='https://hn-case-studies.netlify.app/projects/0'
         ></Project>
         <Project
           header='Personal Blog'
