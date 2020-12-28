@@ -29,7 +29,7 @@ const Container = styled.div`
 const OverflowContainer = styled.div`
   overflow: hidden;
   width: 100%;
-  height: 25em;
+  height: 35rem;
 
   @media ${({ theme }) => theme.breakpoints.tablet} {
     width: 50%;

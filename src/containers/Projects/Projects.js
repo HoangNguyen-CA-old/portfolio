@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Project from '../../components/Project/Project';
 
 import recipeAppImage from '../../assets/images/recipe-app.png';
+import ecommerceWebsiteImage  from '../../assets/images/ecommerce-website.png'
 
 const Container = styled.div`
   display: flex;
@@ -25,10 +26,10 @@ export class Projects extends Component {
           caseStudyLink='https://hn-case-studies.netlify.app/projects/0'
         ></Project>
         <Project
-          header='Personal Blog'
-          background={recipeAppImage}
-          codeLink='https://github.com/HoangNguyen-CA/personal-blog'
-          demoLink='https://hoang-nguyen-blog.herokuapp.com/'
+          header='Ecommerce Website'
+          background={ecommerceWebsiteImage}
+          codeLink='https://github.com/HoangNguyen-CA/nextjs-ecommerce'
+          demoLink='https://nextjs-ecommerce-snowy.vercel.app/'
         ></Project>
       </Container>
     );
