@@ -70,7 +70,7 @@ export class Cover extends Component {
           <Emphasized>Hi,</Emphasized> <br></br> I build apps for the web
         </Title>
         <Line></Line>
-        <SubTitle>Front-End Developer</SubTitle>
+        <SubTitle>Software Engineer</SubTitle>
         <ArrowContainer>
           <StyledIcon icon={arrowIcon}></StyledIcon>
         </ArrowContainer>
