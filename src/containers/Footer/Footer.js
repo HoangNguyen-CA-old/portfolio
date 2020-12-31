@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div`
+const Container = styled.footer`
   height: 3em;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.dark};

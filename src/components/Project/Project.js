@@ -26,7 +26,7 @@ const Container = styled.div`
   transition: 0.2s ease-out;
 `;
 
-const OverflowContainer = styled.div`
+const OverflowContainer = styled.article`
   overflow: hidden;
   width: 100%;
   height: 35rem;
@@ -64,6 +64,7 @@ const Header = styled.h3`
   font-size: 2.5rem;
   margin-bottom: 0.7em;
   text-transform: uppercase;
+  text-align:center;
   color: ${({ theme }) => theme.colors.primary};
 `;
 

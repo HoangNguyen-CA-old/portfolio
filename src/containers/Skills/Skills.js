@@ -5,7 +5,7 @@ import SkillRow from '../../components/SkillRow/SkillRow';
 
 import { frontendIcons, backendIcons, toolIcons } from './Icons';
 
-const Container = styled.div`
+const Container = styled.section`
   background-color: ${({ theme }) => theme.colors.light};
   padding: 3em 1em;
 `;

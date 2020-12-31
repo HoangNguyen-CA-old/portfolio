@@ -18,14 +18,15 @@ const Emphasized = styled.span`
   font-size: 5rem;
 `;
 
-const SubTitle = styled.p`
+const SubTitle = styled.h2`
   color: ${({ theme }) => theme.colors.light};
   font-size: 2rem;
   letter-spacing: 3px;
   text-align: center;
+  font-weight: normal;
 `;
 
-const Hero = styled.div`
+const Hero = styled.header`
   position: relative;
   display: flex;
   flex-direction: column;

@@ -18,7 +18,7 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const Header = styled.h5`
+const Header = styled.h3`
   font-size: 2rem;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.primary};

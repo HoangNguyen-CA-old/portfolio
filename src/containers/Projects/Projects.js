@@ -6,7 +6,7 @@ import Project from '../../components/Project/Project';
 import recipeAppImage from '../../assets/images/recipe-app.png';
 import ecommerceWebsiteImage  from '../../assets/images/ecommerce-website.png'
 
-const Container = styled.div`
+const Container = styled.section`
   display: flex;
   flex-wrap: wrap;
 

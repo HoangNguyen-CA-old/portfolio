@@ -22,7 +22,7 @@ const Container = styled.div`
   color: ${({ theme }) => theme.colors.light};
 `;
 
-const Logo = styled.h6`
+const Logo = styled.p`
   font-size: 1.4rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -43,7 +43,7 @@ const Burger = styled.div`
   }
 `;
 
-const LinksContainer = styled.div`
+const LinksContainer = styled.nav`
   display: none;
 
   @media ${({ theme }) => theme.breakpoints.tablet} {

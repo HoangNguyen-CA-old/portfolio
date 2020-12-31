@@ -11,7 +11,7 @@ import { Icon } from '@iconify/react';
 import githubIcon from '@iconify/icons-logos/github-icon';
 import linkedinIcon from '@iconify/icons-logos/linkedin';
 
-const Container = styled.div`
+const Container = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
