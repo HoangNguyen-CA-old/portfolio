@@ -1,9 +1,24 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
 
 import { Icon } from '@iconify/react';
 
 import arrowIcon from '@iconify/icons-mdi/arrow-down';
+
+const arrowHover = keyframes`
+  0%{
+    transform: translateY(0)
+  }
+  100%{
+    transform: translateY(0)
+  }
+
+  50%{
+    transform: translateY(-1.5em)
+  }
+`
+
 
 const Title = styled.h1`
   color: ${({ theme }) => theme.colors.light};
@@ -55,12 +70,14 @@ const ArrowContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  bottom: 2em;
+  bottom: 5em;
   color: ${({ theme }) => theme.colors.light};
+  animation: ${arrowHover} 2s linear infinite;
+ 
 `;
 
 const StyledIcon = styled(Icon)`
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 `;
 
 export class Cover extends Component {
