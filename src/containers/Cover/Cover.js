@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled, {keyframes} from 'styled-components';
+import coverBG from '../../assets/images/cover.jpg';
 
 
 import { Icon } from '@iconify/react';
@@ -19,6 +20,34 @@ const arrowHover = keyframes`
   }
 `
 
+const moveInTop = keyframes`
+  0%{
+    transform: translateY(-100px);
+    opacity: 0
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1
+  }
+`
+const moveInLeft = keyframes`
+ 0%{
+    transform: translateX(-100px);
+    opacity: 0
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1
+  }
+`
+const fadeIn = keyframes`
+ 0%{
+    opacity: 0
+  }
+  100%{
+    opacity: 1
+  }`
+
 
 const Title = styled.h1`
   color: ${({ theme }) => theme.colors.light};
@@ -27,11 +56,20 @@ const Title = styled.h1`
   letter-spacing: 0.05em;
   text-align: center;
   line-height: 1.4em;
+ 
 `;
 
-const Emphasized = styled.span`
+const TitleMain = styled.span`
   font-size: 5rem;
+  display: block;
+  animation: ${moveInTop} 1s ease-out;
 `;
+
+const TitleSub = styled.span`
+  display:block;
+  animation: ${moveInLeft} 1s ease-out 1s;
+  animation-fill-mode: backwards
+`
 
 const SubTitle = styled.h2`
   color: ${({ theme }) => theme.colors.light};
@@ -39,7 +77,18 @@ const SubTitle = styled.h2`
   letter-spacing: 3px;
   text-align: center;
   font-weight: normal;
+  animation: ${fadeIn} 1s ease-out 2s;
+  animation-fill-mode: backwards;
+
+
+  border-top: 2px solid ${({ theme }) => theme.colors.primaryLight};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.primaryLight};
+  margin-top: 1.2em;
+  padding-bottom: 0.15em;
+  text-transform: uppercase
 `;
+
+
 
 const Hero = styled.header`
   position: relative;
@@ -51,18 +100,20 @@ const Hero = styled.header`
   height: 100vh;
   min-height: 400px;
   padding: 1em;
-  background-color: ${({ theme }) => theme.colors.primary};
+
+
+  background-color: ${({theme}) => theme.colors.primary};
+  z-index: -2;
+  background-image: linear-gradient(
+      to left,
+      ${({ theme }) => theme.colors.primaryDark}88,
+      ${({ theme }) => theme.colors.primaryDark}88
+    ), url(${coverBG});
+  background-size: cover;
+  background-position: center;
 `;
 
-const Line = styled.hr`
-  display: inline-block;
-  width: 3em;
-  height: 5px;
-  background-color: ${({ theme }) => theme.colors.light};
-  border: none;
-  margin: 1em 0;
-  border-radius: 1em;
-`;
+
 
 const ArrowContainer = styled.div`
   position: absolute;
@@ -72,7 +123,8 @@ const ArrowContainer = styled.div`
   margin: 0 auto;
   bottom: 5em;
   color: ${({ theme }) => theme.colors.light};
-  animation: ${arrowHover} 2s linear infinite;
+  animation: ${arrowHover} 2s linear infinite, ${fadeIn} 1s ease-out 2s;
+  animation-fill-mode: backwards;
  
 `;
 
@@ -80,14 +132,16 @@ const StyledIcon = styled(Icon)`
   font-size: 1.8rem;
 `;
 
+
+
 export class Cover extends Component {
   render() {
     return (
       <Hero>
         <Title>
-          <Emphasized>Hi,</Emphasized> <br></br> I build apps for the web
+          <TitleMain>Hi,</TitleMain> 
+          <TitleSub>I build apps for the web</TitleSub>
         </Title>
-        <Line></Line>
         <SubTitle>Software Engineer</SubTitle>
         <ArrowContainer>
           <StyledIcon icon={arrowIcon}></StyledIcon>

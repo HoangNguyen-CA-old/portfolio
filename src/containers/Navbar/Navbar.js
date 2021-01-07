@@ -15,7 +15,8 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: ${(props) =>
-    props.visible ? props.theme.colors.dark : 'transparent'};
+    props.visible ? props.theme.colors.dark : "transparent"};
+  
   transition: 0.2s ease-out;
 
   padding: 0.5em 1.5em;
