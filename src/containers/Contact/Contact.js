@@ -18,7 +18,7 @@ const Container = styled.section`
   align-items: center;
   padding: 3em 1em;
 
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-image: linear-gradient(to bottom, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.dark});
 `;
 
 const Header = styled.h2`
@@ -26,6 +26,7 @@ const Header = styled.h2`
   text-transform: uppercase;
   margin-bottom: 0.5em;
   color: ${({ theme }) => theme.colors.light};
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.3)
 `;
 
 const Form = styled.form`

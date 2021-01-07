@@ -17,7 +17,7 @@ const Container = styled.section`
 export class Projects extends Component {
   render(props) {
     return (
-      <Container>
+      <Container id ="projects">
         <Project
           header='Recipe Search App'
           background={recipeAppImage}

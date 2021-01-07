@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.footer`
-  height: 3em;
+  height: 4em;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.dark};
 
@@ -19,7 +19,7 @@ export class Footer extends Component {
   render() {
     return (
       <Container>
-        <Text>Copyright &copy; Hoang Nguyen 2020</Text>
+        <Text>Copyright &copy; Hoang Nguyen 2021</Text>
       </Container>
     );
   }

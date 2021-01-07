@@ -9,10 +9,21 @@ const Button = styled.button`
 
   background-color: ${({ theme }) => theme.colors.dark};
   color: ${({ theme }) => theme.colors.light};
-  padding: 0.5em 0.7em;
-  border-radius: 1em;
+  padding: 0.6em 1.3em;
+  border-radius: 100px;
 
   text-transform: uppercase;
+  transition: all 0.1s ease-out;
+
+  &:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 2px 15px rgba(0,0,0,0.2);
+  }
+
+  &:active{
+    transform: translateY(-1px);
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+  }
 `;
 
 export default Button;

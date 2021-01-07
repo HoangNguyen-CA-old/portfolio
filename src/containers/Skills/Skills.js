@@ -14,6 +14,7 @@ const Header = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes.header};
   text-transform: uppercase;
   text-align: center;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.2)
 `;
 
 const Skills = () => {

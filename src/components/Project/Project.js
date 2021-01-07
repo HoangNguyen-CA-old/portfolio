@@ -38,7 +38,7 @@ const OverflowContainer = styled.article`
 
 const StyledButton = styled(Button)`
   margin: 0 0.5em;
-  padding: 0.5em 0.7em;
+  padding: 0.6em 1.3em;
 `;
 
 const CodeButton = styled(StyledButton)`
@@ -60,7 +60,7 @@ const ButtonContainer = styled.div`
   display: flex;
 `;
 
-const Header = styled.h3`
+const Header = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 0.7em;
   text-transform: uppercase;
@@ -80,7 +80,7 @@ const Project = (props) => {
     window.open(props.caseStudyLink, '_blank');
   };
   return (
-    <OverflowContainer id='projects'>
+    <OverflowContainer >
       <Container background={props.background}>
         <Header>{props.header}</Header>
         <ButtonContainer>
