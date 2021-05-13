@@ -15,8 +15,8 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: ${(props) =>
-    props.visible ? props.theme.colors.dark : "transparent"};
-  
+    props.visible ? props.theme.colors.dark : 'transparent'};
+
   transition: 0.2s ease-out;
 
   padding: 0.5em 1.5em;
@@ -28,6 +28,8 @@ const Logo = styled.p`
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+
+  color: ${({ theme }) => theme.colors.primary};
 `;
 
 const Burger = styled.div`
