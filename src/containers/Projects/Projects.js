@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Project from '../../components/Project/Project';
 
 import recipeAppImage from '../../assets/images/recipe-app.png';
-import ecommerceWebsiteImage  from '../../assets/images/ecommerce-website.png'
+import ecommerceWebsiteImage from '../../assets/images/ecommerce-website.png';
 
 const Container = styled.section`
   display: flex;
@@ -17,12 +17,12 @@ const Container = styled.section`
 export class Projects extends Component {
   render(props) {
     return (
-      <Container id ="projects">
+      <Container id='projects'>
         <Project
           header='Recipe Search App'
           background={recipeAppImage}
           codeLink='https://github.com/HoangNguyen-CA/cooking-recipe-app'
-          demoLink='https://recipe-app-000.herokuapp.com'
+          demoLink='https://hoangnguyen-recipe-app.herokuapp.com/'
           caseStudyLink='https://hn-case-studies.netlify.app/projects/0'
         ></Project>
         <Project
